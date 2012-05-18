@@ -1,0 +1,7 @@
+category: Audio
+requires: libfftw3_3 libgcc1 libstdc++6
+external-source: chromaprint
+sdesc: "Audio fingerprinting library (runtime)"
+ldesc: "Chromaprint is the core component of the Acoustid project. It's 
+a client-side library that implements a custom algorithm for extracting 
+fingerprints from any audio source."

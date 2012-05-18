@@ -1,0 +1,5 @@
+category: Audio
+sdesc: "Audio fingerprinting library (sources)"
+ldesc: "Chromaprint is the core component of the Acoustid project. It's 
+a client-side library that implements a custom algorithm for extracting 
+fingerprints from any audio source."

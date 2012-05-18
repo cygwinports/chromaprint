@@ -1,0 +1,13 @@
+inherit cmake
+
+
+HOMEPAGE="http://acoustid.org/chromaprint"
+SRC_URI="https://github.com/downloads/lalinsky/${PN}/${P}.tar.gz"
+PATCH_URI="0.6-visibility.patch"
+
+PKG_NAMES="lib${PN}0 lib${PN}-devel"
+libchromaprint0_CONTENTS="usr/bin/cygchromaprint-0.dll usr/share/doc/"
+libchromaprint_devel_CONTENTS="usr/include/ usr/lib/"
+
+# ffmpeg is a bit much just for FFT
+CYGCMAKE_ARGS="-DWITH_FFTW3=YES"
