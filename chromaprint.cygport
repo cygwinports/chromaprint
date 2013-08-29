@@ -1,17 +1,18 @@
+inherit cmake
+
 NAME="chromaprint"
 VERSION=0.7
 RELEASE=1
-CATEGORY="Audio"
+CATEGORY="Libs"
 SUMMARY="Audio fingerprinting library"
 DESCRIPTION="Chromaprint is the core component of the Acoustid project. It's
 a client-side library that implements a custom algorithm for extracting
 fingerprints from any audio source."
 HOMEPAGE="http://acoustid.org/chromaprint"
-SRC_URI="https://github.com/downloads/lalinsky/${PN}/${P}.tar.gz"
+SRC_URI="https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-${VERSION}.tar.gz"
 PATCH_URI="0.6-visibility.patch"
-inherit cmake
 
-PKG_NAMES="lib${PN}0 lib${PN}-devel"
+PKG_NAMES="lib${NAME}0 lib${NAME}-devel"
 libchromaprint0_CONTENTS="usr/bin/cygchromaprint-0.dll usr/share/doc/"
 libchromaprint_devel_CONTENTS="usr/include/ usr/lib/"
 
