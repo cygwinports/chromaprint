@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="chromaprint"
-VERSION=1.2
+VERSION=1.4.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Audio fingerprinting library"
@@ -10,10 +10,11 @@ a client-side library that implements a custom algorithm for extracting
 fingerprints from any audio source."
 HOMEPAGE="http://acoustid.org/chromaprint"
 SRC_URI="https://bitbucket.org/acoustid/chromaprint/downloads/chromaprint-${VERSION}.tar.gz"
+PATCH_URI="1.4.2-c++11.patch"
 
-PKG_NAMES="lib${NAME}0 lib${NAME}-devel"
-libchromaprint0_CONTENTS="usr/bin/cygchromaprint-0.dll usr/share/doc/"
+PKG_NAMES="lib${NAME}1 lib${NAME}-devel"
+libchromaprint1_CONTENTS="usr/bin/cygchromaprint-1.dll usr/share/doc/"
 libchromaprint_devel_CONTENTS="usr/include/ usr/lib/"
 
 # ffmpeg is a bit much just for FFT
-CYGCMAKE_ARGS="-DWITH_FFTW3=YES"
+CYGCMAKE_ARGS="-DFFT_LIB=fftw3"

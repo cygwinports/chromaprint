@@ -1,0 +1,14 @@
+--- origsrc/chromaprint-1.4.2/CMakeLists.txt	2016-12-28 14:10:42.000000000 -0600
++++ src/chromaprint-1.4.2/CMakeLists.txt	2017-07-04 23:30:39.291584700 -0500
+@@ -31,9 +31,9 @@ include(CheckCXXCompilerFlag)
+ 
+ find_package(Threads)
+ 
+-check_cxx_compiler_flag("-std=c++11" COMPILER_SUPPORTS_CXX11)
++check_cxx_compiler_flag("-std=gnu++11" COMPILER_SUPPORTS_CXX11)
+ if(COMPILER_SUPPORTS_CXX11)
+-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
++	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
+ endif()
+ 
+ if(CMAKE_COMPILER_IS_GNUCXX AND BUILD_SHARED_LIBS)
